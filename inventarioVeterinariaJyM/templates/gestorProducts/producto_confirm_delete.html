@@ -1,0 +1,35 @@
+{% extends 'base_dashboard.html' %}
+
+{% block title %}Eliminar Producto - Chucky PB{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 ml-auto mr-auto">
+        <div class="card card-user">
+            <div class="card-header bg-danger text-white">
+                <h5 class="card-title mb-0">Confirmar Eliminación</h5>
+            </div>
+            <div class="card-body text-center">
+                <div class="author mt-4">
+                    <i class="nc-icon nc-alert-circle-i text-danger" style="font-size: 4em;"></i>
+                    <h5 class="title mt-3">¿Estás seguro?</h5>
+                    <p class="description">
+                        Vas a eliminar el producto <strong>"{{ producto.nombre }}"</strong>.
+                        <br>
+                        Esta acción no se puede deshacer.
+                    </p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="button-container text-center">
+                        <a href="{% url 'producto_list' %}" class="btn btn-secondary btn-round">Cancelar</a>
+                        <button type="submit" class="btn btn-danger btn-round">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

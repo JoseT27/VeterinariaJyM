@@ -1,0 +1,26 @@
+SuperUser:
+Nombre: joset
+Correo: josetroncoso@gmail.com
+Contraseña:12345678
+
+
+User normal
+Nombre: manuel23
+Correo:manuelletelier@gmail.com
+Contraseña:z98aYjvyTLd4jFq
+
+
+Admin
+Nombre: Enriqueib
+Correo: enriqueibanez@gmail.com
+Contraseña:bqHbarJ5cu3KkS2
+
+
+User normal2:
+Nombre: Alfonso23
+Correo:alfonsomendez@gmail.com
+Contraseña: vp3e6DZy7R6iK9L
+
+Link: https://github.com/JoseT27/VeterinariaJyM.git
+
+Integrantes:Jose Troncoso Ibañez, Manuel Letelier Mendez

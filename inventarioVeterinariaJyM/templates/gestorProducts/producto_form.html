@@ -1,0 +1,36 @@
+{% extends 'base_dashboard.html' %}
+
+{% block title %}{{ title }} - Chucky PB{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 ml-auto mr-auto">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">{{ title }}</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                        {% for error in field.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    <div class="text-right mt-4">
+                        <a href="{% url 'producto_list' %}" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
